@@ -14,3 +14,20 @@ temp = target - (a);
     }
   }
 }
+
+
+
+void CP::validate_subsequence(std::vector<int>arr,std::vector<int>sub){
+  int sub_i = 0;
+  int sub_max = sub.size()-1;
+  for(int i:arr){
+    if(i == sub[sub_i]){
+      ++sub_i;
+      if(sub_i > sub_max){
+        std::cout<< "True" << std::endl;
+        break;
+      }
+    }
+  }
+  std::cout<< "False"<<std::endl;
+}
